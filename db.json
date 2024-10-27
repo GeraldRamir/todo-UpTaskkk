@@ -1,3 +1,10 @@
 {
-  "tareas": []
+  "tareas": [
+    {
+      "id": "9640",
+      "tarea": "Hacer el modulo de admnistracion",
+      "creador": "Gerald",
+      "importancia": "Importante"
+    }
+  ]
 }

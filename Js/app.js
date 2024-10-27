@@ -3,13 +3,17 @@ import { obtenerDatos, eliminarTarea } from "./API.js"
 (function() {
     const listaTareas= document.querySelector('#tareas')
     document.addEventListener('DOMContentLoaded',()=>{
-        obtenerTareas();
+        mostrarTareas();
         setInterval(obtenerDatos, 1000);
         
     })
 
-    async function obtenerTareas() {
+    async function mostrarTareas() {
         const datos = await obtenerDatos();
+        // const noTareas = document.querySelector('#no-tareas');
+        
+        // Limpiar la lista de tareas antes de agregar los nuevos datos
+        // noTareas.remove()
         datos.forEach(elemento => {
             const { id, tarea, creador, importancia } = elemento; // Asegúrate de que `id` esté en los datos.
     

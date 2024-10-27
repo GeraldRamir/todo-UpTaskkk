@@ -1,4 +1,4 @@
-const url= 'http://localhost:4000/tareas'
+const url= 'https://todo-uptask.onrender.com/tareas'
 export const enviarDatos= async (objTarea)=>{
     await fetch(url,{
         method: 'POST',
@@ -18,7 +18,14 @@ export const obtenerDatos= async ()=>{
 }
 
 export const eliminarTarea= async id=>{
-    await fetch(`${url}/${id}`,{
-        method: 'DELETE'
-    })
+
+    try {
+        
+        await fetch(`${url}/${id}`,{
+            method: 'DELETE'
+        })
+    } catch (error) {
+        console.log(error)
+        
+    }
 }
